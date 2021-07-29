@@ -1,7 +1,7 @@
 from AccGenBot import BotzCity, enjoy, BACK
 from telethon import events, Button
 import random
-from AccGenBot.func import check 
+
 from vars import var
 import asyncio, os, re
 
@@ -13,10 +13,7 @@ bot = BotzCity
 @bot.on(events.NewMessage(pattern="^[/!](spotify|SPOTIFY|Spotify)$"))
 async def _(event):
    join = [[Button.url("Jᴏɪɴ ᴄʜᴀɴɴᴇʟ", f"{CHANNEL}")]]
-   lol = await check(USERNAME, event, bot)
-   if lol is False:
-       await event.reply(f"**Heya {event.sender.first_name}, join my channel to use me!**", buttons=join)
-       return
+
    gen = await event.reply("`Generating Account Pls weit`")
    with open("spotify.txt") as Alain:
      noice = Alain.read().splitlines()
@@ -43,10 +40,7 @@ async def _(event):
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"spotify")))
 async def _(event):
    join = [[Button.url("Jᴏɪɴ ᴄʜᴀɴɴᴇʟ", f"{CHANNEL}")]]
-   lol = await check(USERNAME, event, bot)
-   if lol is False:
-       await event.reply(f"**Heya {event.sender.first_name}, join my channel to use me!**", buttons=join)
-       return
+
    with open("spotify.txt") as Alain:
      noice = Alain.read().splitlines()
      nice = random.choice(noice)
