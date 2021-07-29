@@ -1,7 +1,7 @@
 from AccGenBot import BotzCity
 from telethon import events,Button
 import re, os, random
-from AccGenBot.func import check
+
 from vars import var
 
 USERNAME = var.CHANNEL_USERNAME
@@ -14,10 +14,7 @@ bot = BotzCity
 @bot.on(events.NewMessage(pattern="^[/!](start|Start|START)"))
 async def _(event):
    join = [[Button.url("Jᴏɪɴ ᴄʜᴀɴɴᴇʟ", f"{CHANNEL}")]]
-   lol = await check(USERNAME, event, bot)
-   if lol is False:
-       await event.reply(f"**Heya {event.sender.first_name}, join my channel to use me!**", buttons=join)
-       return
+
    if event.is_private:
         button = [[Button.inline("Generate Accounts",data="gen"), Button.url("Channel","t.me/BotzCity")]]
         button += [[Button.url("Support","t.me/BotzCityChat")]]
