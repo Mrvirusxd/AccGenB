@@ -11,6 +11,7 @@
     "website": "https://t.me/BotzCity",
     "repository": "https://github.com/BotzCity/AccGenBot",
     "success_url": "https://telegram.dog/BotzCity",
+    "stack": "container",
     "env": {
         "APP_ID": {
             "description": "Your APP ID From my.telegram.org or @UseTgxBot",
@@ -37,15 +38,6 @@
             "value": ""
         }
     },
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
-    ],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    }
+    
+    
 }
