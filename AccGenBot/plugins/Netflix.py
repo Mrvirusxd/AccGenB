@@ -14,9 +14,7 @@ bot = BotzCity
 async def _(event):
    join = [[Button.url("Jᴏɪɴ ᴄʜᴀɴɴᴇʟ", f"{CHANNEL}")]]
    lol = await check(USERNAME, event, bot)
-   if lol is False:
-       await event.reply(f"**Heya {event.sender.first_name}, join my channel to use me!**", buttons=join)
-       return
+
    gen = await event.reply("`Generating Account Pls weit`")
    with open("netflix.txt") as Alain:
      noice = Alain.read().splitlines()
@@ -45,9 +43,7 @@ async def _(event):
 async def _(event):
    join = [[Button.url("Jᴏɪɴ ᴄʜᴀɴɴᴇʟ", f"{CHANNEL}")]]
    lol = await check(USERNAME, event, bot)
-   if lol is False:
-       await event.reply(f"**Heya {event.sender.first_name}, join my channel to use me!**", buttons=join)
-       return
+
    with open("netflix.txt") as Alain:
      noice = Alain.read().splitlines()
      nice = random.choice(noice)
