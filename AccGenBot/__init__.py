@@ -1,5 +1,6 @@
 import os
 import logging
+import telethon
 from telethon import TelegramClient, Button, events
 from vars import var
 
