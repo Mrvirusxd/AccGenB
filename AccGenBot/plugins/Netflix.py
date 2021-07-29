@@ -1,7 +1,7 @@
 from AccGenBot import BotzCity, enjoy, BACK
 from telethon import events, Button
 import random
-from AccGenBot.func import check 
+
 from vars import var
 import asyncio, re, os
 
@@ -13,7 +13,7 @@ bot = BotzCity
 @bot.on(events.NewMessage(pattern="^[/!](netflix|NETFLIX|Netflix)$"))
 async def _(event):
    join = [[Button.url("Jᴏɪɴ ᴄʜᴀɴɴᴇʟ", f"{CHANNEL}")]]
-   lol = await check(USERNAME, event, bot)
+
 
    gen = await event.reply("`Generating Account Pls weit`")
    with open("netflix.txt") as Alain:
@@ -42,7 +42,7 @@ async def _(event):
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"netflix")))
 async def _(event):
    join = [[Button.url("Jᴏɪɴ ᴄʜᴀɴɴᴇʟ", f"{CHANNEL}")]]
-   lol = await check(USERNAME, event, bot)
+
 
    with open("netflix.txt") as Alain:
      noice = Alain.read().splitlines()
