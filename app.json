@@ -10,7 +10,7 @@
     ],
     "website": "https://t.me/BotzCity",
     "repository": "https://github.com/Mrvirusxd/AccGenB",
-    "success_url": "https://telegram.dog/BotzCity",
+    "success_url": "https://telegram.dog/LinusTechTips90",
     "stack": "container",
     "env": {
         "APP_ID": {
@@ -26,11 +26,11 @@
             "value": ""
         },
         "CHANNEL_USERNAME": {
-            "description": "Your Channel Username, eg - @BotzCity",
+            "description": "Your Channel Username, eg - @LinusTechTips90",
             "value": ""
         },
         "CHANNEL_URL": {
-            "description": "Your Channel URL, eg- t.me/BotzCity",
+            "description": "Your Channel URL, eg- t.me/LinusTechTips90",
             "value": ""
         },
         "LOGS": {
